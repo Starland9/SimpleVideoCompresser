@@ -6,4 +6,7 @@ source
 *.pyc
 dist
 build
-*main.*
+main.build
+main.dist
+main.onefile-build
+main.bin
