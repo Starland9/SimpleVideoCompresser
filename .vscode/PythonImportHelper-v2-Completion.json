@@ -1,0 +1,159 @@
+[
+    {
+        "label": "QThread",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "pyqtSignal",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QThread",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "pyqtSignal",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "FFmpeg",
+        "importPath": "ffmpeg",
+        "description": "ffmpeg",
+        "isExtraImport": true,
+        "detail": "ffmpeg",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PyQt6",
+        "description": "PyQt6",
+        "isExtraImport": true,
+        "detail": "PyQt6",
+        "documentation": {}
+    },
+    {
+        "label": "QtGui",
+        "importPath": "PyQt6",
+        "description": "PyQt6",
+        "isExtraImport": true,
+        "detail": "PyQt6",
+        "documentation": {}
+    },
+    {
+        "label": "QtWidgets",
+        "importPath": "PyQt6",
+        "description": "PyQt6",
+        "isExtraImport": true,
+        "detail": "PyQt6",
+        "documentation": {}
+    },
+    {
+        "label": "ConverterThread",
+        "importPath": "compressor_thread",
+        "description": "compressor_thread",
+        "isExtraImport": true,
+        "detail": "compressor_thread",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_MainWindow",
+        "importPath": "gui_main",
+        "description": "gui_main",
+        "isExtraImport": true,
+        "detail": "gui_main",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFileDialog",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "ConverterThread",
+        "kind": 6,
+        "importPath": "compressor_thread",
+        "description": "compressor_thread",
+        "peekOfCode": "class ConverterThread(QThread):\n    conversion_finished = pyqtSignal()\n    files_length = pyqtSignal(int)\n    current_file = pyqtSignal(int)\n    current_file_name = pyqtSignal(str)\n    def __init__(self, source, dest):\n        super().__init__()\n        self.source = source\n        self.dest = dest\n    def run(self):",
+        "detail": "compressor_thread",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_MainWindow",
+        "kind": 6,
+        "importPath": "gui_main",
+        "description": "gui_main",
+        "peekOfCode": "class Ui_MainWindow(object):\n    def setupUi(self, MainWindow):\n        MainWindow.setObjectName(\"MainWindow\")\n        MainWindow.resize(500, 146)\n        MainWindow.setMaximumSize(QtCore.QSize(500, 150))\n        self.centralwidget = QtWidgets.QWidget(parent=MainWindow)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)\n        self.gridLayout.setObjectName(\"gridLayout\")\n        self.verticalLayout_2 = QtWidgets.QVBoxLayout()",
+        "detail": "gui_main",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MainWindow(QMainWindow, Ui_MainWindow):\n    def __init__(self, parent=None):\n        super().__init__(parent)\n        self.files_length = 0\n        self.converter_thread = None\n        self.dest_folder = None\n        self.source_folder = None\n        self.setupUi(self)\n        self.progressBar.hide()\n        self.add_actions()",
+        "detail": "main",
+        "documentation": {}
+    }
+]
