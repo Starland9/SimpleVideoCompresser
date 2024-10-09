@@ -1,10 +1,10 @@
-from compressor_thread import ConverterThread
-from gui_main import Ui_MainWindow
+from src.compressor_thread import ConverterThread
+from src.pyui.main_ui import Ui_MainWindow
 from PyQt6.QtWidgets import QMainWindow, QFileDialog, QMessageBox
-from PyQt6.QtCore import QThread, pyqtSignal
 
 import sys
 from PyQt6.QtWidgets import QApplication
+from src.about import About
 
 
 # noinspection PyUnresolvedReferences
@@ -26,6 +26,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.source_btn.clicked.connect(self.get_source_folder)
         self.dest_btn.clicked.connect(self.get_destination_folder)
         self.convert_pushButton.clicked.connect(self.convert_video)
+        self.actionAbout_Dev.triggered.connect(self.show_about)
 
     def get_source_folder(self):
         self.source_folder = QFileDialog.getExistingDirectory(
@@ -74,6 +75,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def on_current_file_name(self, current_file_name):
         self.statusbar.showMessage(f"Converting file {current_file_name}")
+        
+    def show_about(self):
+        self.about_dialog = About()
+        self.about_dialog.show()
 
 
 if __name__ == "__main__":

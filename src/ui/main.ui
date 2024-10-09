@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>146</height>
+    <height>150</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -76,7 +76,7 @@
       <item>
        <widget class="QPushButton" name="convert_pushButton">
         <property name="text">
-         <string>Convertir</string>
+         <string>Compress</string>
         </property>
        </widget>
       </item>
@@ -103,8 +103,20 @@
      <height>20</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_Dev"/>
+   </widget>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout_Dev">
+   <property name="text">
+    <string>About Dev</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

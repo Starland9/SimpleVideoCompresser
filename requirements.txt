@@ -1,1 +1,11 @@
-PyQt6~=6.7.1
+altgraph==0.17.4
+packaging==24.1
+pyee==12.0.0
+pyinstaller==6.10.0
+pyinstaller-hooks-contrib==2024.8
+PyQt6==6.7.1
+PyQt6-Qt6==6.7.3
+PyQt6_sip==13.8.0
+python-ffmpeg==2.0.12
+setuptools==75.1.0
+typing_extensions==4.12.2
