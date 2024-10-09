@@ -4,3 +4,6 @@ dest
 source
 
 *.pyc
+dist
+build
+*main.*
