@@ -1,5 +1,6 @@
 from PyQt6.QtCore import QThread, pyqtSignal
 
+import subprocess
 import os
 
 from ffmpeg import FFmpeg
@@ -37,5 +38,17 @@ class ConverterThread(QThread):
             print("Tous les fichiers ont été convertis avec succès !")
             self.conversion_finished.emit()
         except Exception as e:
+            install_ffmpeg_for_plateform()
+            self.run()
             print(f"Erreur pendant la conversion : {e}")
             self.conversion_finished.emit()
+            
+    
+def install_ffmpeg_for_plateform():
+    platform = os.name
+    print(platform)
+    if platform == "nt":
+        subprocess.run(["choco", "install", "ffmpeg"])
+        
+    elif platform == "posix":
+        subprocess.run(["sudo", "apt-get", "install", "ffmpeg"])
