@@ -207,15 +207,6 @@
         "documentation": {}
     },
     {
-        "label": "install_ffmpeg_for_plateform",
-        "kind": 2,
-        "importPath": "src.compressor_thread",
-        "description": "src.compressor_thread",
-        "peekOfCode": "def install_ffmpeg_for_plateform():\n    platform = os.name\n    print(platform)\n    if platform == \"nt\":\n        subprocess.run([\"choco\", \"install\", \"ffmpeg\"])\n    elif platform == \"posix\":\n        subprocess.run([\"sudo\", \"apt-get\", \"install\", \"ffmpeg\"])",
-        "detail": "src.compressor_thread",
-        "documentation": {}
-    },
-    {
         "label": "MainWindow",
         "kind": 6,
         "importPath": "main",
