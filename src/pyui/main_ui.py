@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'main.ui'
+# Form implementation generated from reading ui file 'src/ui/main.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -61,14 +61,22 @@ class Ui_MainWindow(object):
         self.menubar.setObjectName("menubar")
         self.menuAbout = QtWidgets.QMenu(parent=self.menubar)
         self.menuAbout.setObjectName("menuAbout")
+        self.menuSettings = QtWidgets.QMenu(parent=self.menubar)
+        self.menuSettings.setObjectName("menuSettings")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.actionAbout_Dev = QtGui.QAction(parent=MainWindow)
         self.actionAbout_Dev.setObjectName("actionAbout_Dev")
+        self.actionExtensions = QtGui.QAction(parent=MainWindow)
+        self.actionExtensions.setObjectName("actionExtensions")
+        self.actionSettings = QtGui.QAction(parent=MainWindow)
+        self.actionSettings.setObjectName("actionSettings")
         self.menuAbout.addAction(self.actionAbout_Dev)
+        self.menuSettings.addAction(self.actionSettings)
         self.menubar.addAction(self.menuAbout.menuAction())
+        self.menubar.addAction(self.menuSettings.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -82,4 +90,7 @@ class Ui_MainWindow(object):
         self.dest_btn.setText(_translate("MainWindow", "..."))
         self.convert_pushButton.setText(_translate("MainWindow", "Compress"))
         self.menuAbout.setTitle(_translate("MainWindow", "About"))
+        self.menuSettings.setTitle(_translate("MainWindow", "Settings"))
         self.actionAbout_Dev.setText(_translate("MainWindow", "About Dev"))
+        self.actionExtensions.setText(_translate("MainWindow", "Extensions"))
+        self.actionSettings.setText(_translate("MainWindow", "Settings"))

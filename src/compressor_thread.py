@@ -5,6 +5,9 @@ import os
 
 from ffmpeg import FFmpeg
 
+from src.services.settings_services import SettingsService
+
+
 class ConverterThread(QThread):
     conversion_finished = pyqtSignal()
     files_length = pyqtSignal(int)
@@ -15,11 +18,15 @@ class ConverterThread(QThread):
         super().__init__()
         self.source = source
         self.dest = dest
+        self.selected_extensions = SettingsService().get_selected_extensions()
 
     def run(self):
         try:
             fichiers_a_convertir = [
-                f for f in os.listdir(self.source)
+                f
+                for f in os.listdir(self.source)
+                if os.path.isfile(os.path.join(self.source, f))
+                and os.path.splitext(f)[1][1:].upper() in self.selected_extensions
             ]
 
             self.files_length.emit(len(fichiers_a_convertir))
@@ -41,5 +48,3 @@ class ConverterThread(QThread):
             self.run()
             print(f"Erreur pendant la conversion : {e}")
             self.conversion_finished.emit()
-            
-    

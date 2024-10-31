@@ -11,3 +11,4 @@ main.dist
 main.onefile-build
 main.bin
 test.py
+settings.json

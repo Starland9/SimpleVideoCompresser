@@ -214,14 +214,5 @@
         "peekOfCode": "class MainWindow(QMainWindow, Ui_MainWindow):\n    def __init__(self, parent=None):\n        super().__init__(parent)\n        self.files_length = 0\n        self.converter_thread = None\n        self.dest_folder = None\n        self.source_folder = None\n        self.setupUi(self)\n        self.progressBar.hide()\n        self.add_actions()",
         "detail": "main",
         "documentation": {}
-    },
-    {
-        "label": "install_ffmpeg_for_plateform",
-        "kind": 2,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "def install_ffmpeg_for_plateform():\n    platform = os.name\n    print(platform)\n    if platform == \"nt\":\n        subprocess.run([\"choco\", \"install\", \"ffmpeg\"])\n    elif platform == \"posix\":\n        subprocess.run([\"sudo\", \"apt-get\", \"install\", \"ffmpeg\"])\nif __name__ == \"__main__\":\n    install_ffmpeg_for_plateform()",
-        "detail": "test",
-        "documentation": {}
     }
 ]
